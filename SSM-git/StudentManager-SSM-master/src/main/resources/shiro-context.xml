@@ -15,7 +15,9 @@
 		<property name="filterChainDefinitions">
 			<value>
 			 /shiro-logout = logout
-				/login = anon <!--可以不需要登录-->
+			 /checkCode=anon
+				/login-vue.html = anon <!--可以不需要登录-->
+				/login-vue.jsp = anon
 				 <!-- perms 表示需要该权限才能访问的页面 -->
 				/printStudentInfo = roles[teacher]
 				/exportExcel=roles[teacher]
@@ -44,8 +46,31 @@
 	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
 		<!-- 注入realm -->
 		<property name="realm" ref="myShiroRealm"/>
+		   <!--注入rememberMe cookie管理器-->
+        <property name="rememberMeManager" ref="rememberMeManager"/>
 	</bean>
+<!--手动指定cookie-->
+    <bean id="rememberMeCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+        <constructor-arg value="rememberMe"/>
+        <property name="httpOnly" value="true"/>
+        <property name="maxAge" value="604800"/><!-- 7天 -->
+    </bean>
 
+    <!-- rememberMe管理器 -->
+    <bean id="rememberMeManager"
+          class="org.apache.shiro.web.mgt.CookieRememberMeManager">
+        <!--注入自定义cookie(主要是设置寿命, 默认的一年太长)-->
+        <property name="cookie" ref="rememberMeCookie"/>
+    </bean>
+  <!-- 基于Form表单的身份验证过滤器 -->
+    <bean id="formAuthenticationFilter" class="org.apache.shiro.web.filter.authc.FormAuthenticationFilter">
+        <!-- 这两个字段，username和password要和表单中定义的username和password字段名称相同，可以更改，但是表单和XML要对应 -->
+        <property name="usernameParam" value="username"/>
+        <property name="passwordParam" value="password"/>
+        <property name="loginUrl" value="/login-vue.html"/>
+        <!-- rememberMeParam是rememberMe请求参数名，请求参数是boolean类型，true表示记住我 -->
+        <property name="rememberMeParam" value="rememberMe"/>
+    </bean>
 	<!--声明一个Service 注入到自定义Realm-->
 	<bean id="accountService" class="cn.wmyskxz.service.UserServiceImpl"/>
 	  <bean id="lifecycleBeanPostProcessor" 
