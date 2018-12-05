@@ -47,7 +47,7 @@
              <i class="glyphicon glyphicon-cog" ></i>班级信息管理
               <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
                <ul id="systemSetting1" class="nav nav-list collapse secondmenu" style="height: 0px;">
-            <li><a href="#"><i class="glyphicon glyphicon-user"></i>班级信息显示</a></li>
+            <li><a href="/classinfo"><i class="glyphicon glyphicon-user"></i>班级信息显示</a></li>
             <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>查询班级</a></li>
             <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i>导出班级名单</a></li>
             </ul>

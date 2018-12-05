@@ -13,7 +13,7 @@ new Vue({
                 username: '',
                 password: '',
                 remember: '',
-                code:'',
+                code:''
             },
             flag: true,
             loading: {}, //loading动画
@@ -38,7 +38,7 @@ new Vue({
             this.$refs[login].validate((valid) => {
                 if (valid) {
                     this.loadings(); //加载动画
-                // window.alert(this.login.code);
+               //window.alert(this.login.code);
           		    
                     this.$http.post('/login', {
                         username: this.login.username,
@@ -46,11 +46,12 @@ new Vue({
                         remember: this.login.remember,
                         code:this.login.code
                     }).then(result => {
-                    	//window.alert(result);
+                    	window.alert(result);
+                    	window.alert(result.body.success);
                     	
                         // 判断用户是否登录成功，后端返回JSON格式数据，不然娶不到数据
                         if (result.body.success) {
-                        	alert("success");
+                        	//alert("success");
                             window.location.href = "/listStudentInfo";
                             this.loading.close(); //关闭动画加载
                         } else {
@@ -59,13 +60,13 @@ new Vue({
                             this.$emit(
                                 'submit-form',
                                 this.$message({
-                                    message:result.body.message,
+                                  message:result.body.message,
                                     type: 'warning',
                                     duration: 6000
                                 }),
                             );
                             // 清空表单状态
-                            this.$refs[login].resetFields();
+                           // this.$refs[login].resetFields();
                         }
                     });
           		}

@@ -15,6 +15,7 @@
 		<property name="filterChainDefinitions">
 			<value>
 			 /shiro-logout = logout
+			 /login=anon
 			 /checkCode=anon
 				/login-vue.html = anon <!--可以不需要登录-->
 				/login-vue.jsp = anon

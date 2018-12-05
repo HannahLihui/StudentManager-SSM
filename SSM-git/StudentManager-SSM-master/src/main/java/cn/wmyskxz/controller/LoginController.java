@@ -33,10 +33,10 @@ public class LoginController {
             ) {
 		 String error = null;
 		 HttpSession session = request.getSession();
-		  System.out.println(code);
-		  //System.out.println(session.getAttribute( RandomValidateCode.RANDOMCODEKEY));
-		if(username==null||session.getAttribute( RandomValidateCode.RANDOMCODEKEY).equals(code)) {
-			//System.out.println("code 有问题");
+		  System.out.println(code.toUpperCase());
+		 System.out.println(session.getAttribute( RandomValidateCode.RANDOMCODEKEY).equals(code.toUpperCase()));
+		if(username==null||!session.getAttribute( RandomValidateCode.RANDOMCODEKEY).equals(code.toUpperCase())) {
+			System.out.println("code 有问题");
 			return new Result(false, error);
 		}
 		
@@ -58,7 +58,7 @@ public class LoginController {
 		try {
 			
 			subject.login(token);
-			 Result re=new Result(true, "success");
+			
 			
 			 return new Result(true,error);
 			 
@@ -72,8 +72,10 @@ public class LoginController {
      	 System.out.println( "其他的登陆错误");
      	 error = "错误信息：" + e.getMessage();
      	
+     }finally {
+    	
      }
-		return new Result(false, error); 
+		return new Result(true, error); 
 		
 	}
 	@RequestMapping(value="/checkCode")
