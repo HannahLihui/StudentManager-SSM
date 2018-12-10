@@ -160,7 +160,11 @@ public class StudentInfoController {
 	}
 	  @RequestMapping("/deleteStudentInfo")
 	    public String deleteStudent(int id) {
+		  StudentInfo info=studentInfo.getStudent(id);
+	        System.out.println(info.getSno());
+	        studentInfo.updateClassNumSub(info);
 	        studentInfo.deleteStudent(id);
+	       
 	        return "redirect:listStudentInfo";
 	    }
 

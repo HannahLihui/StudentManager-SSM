@@ -26,20 +26,24 @@ background-position: center center;
 }
 </style>
 </head>
-<body>
+<body onload="clickButton()">
 <div id="main" style="width:600px;height:400px;"></div>
-<input type="button" value="显示信息">
+<input id="button" type="button" value="显示信息">
   <a href="/index.jsp">
     <button  class="btn btn-sucess">返回主页面</button>
    </a>
 <script type="text/javascript">
+function clickButton(){
+	var button=document.getElementById('button');
+	button.click();
+}
 var prod1;
 var prod2;
 var prod3;
 var prod4;
 $(function(){
     $("input:button").on("click",function(){
-        alert(1);
+        
         $.ajax({
            type: "POST",
            url: "/getAll",
@@ -59,7 +63,7 @@ $(function(){
                 var y1 = data[0].count;
                 var y2 = data[1].count;
                 var  y3 = data[2].count;
-                 var y4 = data[3].count;
+                var y4 = data[3].count;
                //基于准备好的dom，初始化echarts实例
                 var myChart = echarts.init(document.getElementById('main'),'light');
                 //指定图标的配置和数据

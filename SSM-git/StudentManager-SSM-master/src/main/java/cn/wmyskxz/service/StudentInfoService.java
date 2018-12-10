@@ -22,4 +22,5 @@ public interface StudentInfoService {
 	    public void exportAls(FileInputStream fileInputStream, ServletOutputStream outputStream);
 	    List<StudentGroup> groupByYear();
 	    void updateClassNum(StudentInfo student);
+	    void updateClassNumSub(StudentInfo student);
 }

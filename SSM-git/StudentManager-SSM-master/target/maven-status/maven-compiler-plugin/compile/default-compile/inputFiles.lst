@@ -2,15 +2,19 @@ D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\service\ClassInfoSe
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\service\StudentInfoService.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\entity\Student.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\controller\ClassController.java
+D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\entity\CourseInfo.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\dao\StudentInfoDao.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\entity\User.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\service\StudentInfoServiceImpl.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\service\StudentServiceImpl.java
+D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\service\CourseInfoService.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\dao\ClassInfoDao.java
+D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\dao\CourseInfoDao.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\dao\StudentDao.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\util\Page.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\service\UserServiceImpl.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\login\MyRealm.java
+D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\controller\CourseInfoController.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\service\UserService.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\util\RandomValidateCode.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\entity\ClassInfo.java
@@ -20,6 +24,7 @@ D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\controller\LoginCon
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\entity\StudentInfo.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\entity\Result.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\service\ClassInfoServiceImpl.java
+D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\service\CourseInfoServiceImpl.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\controller\StudentController.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\entity\StudentGroup.java
 D:\Chrome\StudentManager-SSM-master\src\main\java\cn\wmyskxz\controller\StudentInfoController.java

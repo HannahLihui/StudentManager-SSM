@@ -32,10 +32,11 @@ public class LoginController {
             HttpServletRequest request
             ) {
 		 String error = null;
+		
 		 HttpSession session = request.getSession();
-		  System.out.println(code.toUpperCase());
+		  //System.out.println(code.toUpperCase());
 		 System.out.println(session.getAttribute( RandomValidateCode.RANDOMCODEKEY).equals(code.toUpperCase()));
-		if(username==null||!session.getAttribute( RandomValidateCode.RANDOMCODEKEY).equals(code.toUpperCase())) {
+		if(!session.getAttribute( RandomValidateCode.RANDOMCODEKEY).equals(code.toUpperCase())) {
 			System.out.println("code 有问题");
 			return new Result(false, error);
 		}
@@ -72,9 +73,8 @@ public class LoginController {
      	 System.out.println( "其他的登陆错误");
      	 error = "错误信息：" + e.getMessage();
      	
-     }finally {
-    	
      }
+		 
 		return new Result(true, error); 
 		
 	}

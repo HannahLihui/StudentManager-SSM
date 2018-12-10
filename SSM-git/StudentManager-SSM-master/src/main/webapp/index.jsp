@@ -35,11 +35,12 @@
                 <span class="pull-right glyphicon glyphicon-chevron-down"></span>
              </a>
           <ul id="systemSetting" class="nav nav-list collapse secondmenu" style="height: 0px;">
-            <li><a href="/listStudentInfo"><i class="glyphicon glyphicon-user"></i>学籍列表显示和添加</a></li>
-            <li><a href="search.jsp"><i class="glyphicon glyphicon-th-list"></i>学生信息查询</a></li>
-            <li><a href="/printStudentInfo"><i class="glyphicon glyphicon-th-list"></i>打印学生信息</a></li>
-            <li><a href="/groupStat"><i class="glyphicon glyphicon-asterisk"></i>统计学生页面</a></li>
+            <li><a href="/listStudentInfo"><i class="glyphicon glyphicon-user"></i>学籍列表显示</a></li>
+            <li><a href="/search.jsp"><i class="glyphicon glyphicon-th-list"></i>学生信息查询</a></li>
+            <li><a href="/addStudentInfo"><i class="glyphicon glyphicon-th-list"></i>学生信息添加</a></li>
+            <li><a href="/printStudentInfo"><i class="glyphicon glyphicon-asterisk"></i>打印学生成绩</a></li>
              <li><a href="/exportExcel"><i class="glyphicon glyphicon-edit"></i>导出excel</a></li>
+              <li><a href="/groupStat"><i class="glyphicon glyphicon-edit"></i>统计页面</a></li>
           </ul>
           </li>
           <li id="ul_menu">
@@ -48,8 +49,7 @@
               <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
                <ul id="systemSetting1" class="nav nav-list collapse secondmenu" style="height: 0px;">
             <li><a href="/classinfo"><i class="glyphicon glyphicon-user"></i>班级信息显示</a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>查询班级</a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i>导出班级名单</a></li>
+           
             </ul>
               
          </li>
@@ -57,20 +57,19 @@
              <a href="#systemSetting2" class="nav-header collapsed" data-toggle="collapse">
              <i class="glyphicon glyphicon-globe"></i>课程管理模块<span class="label label-warning pull-right">5</span></a>
                <ul id="systemSetting2" class="nav nav-list collapse secondmenu" style="height: 0px;">
-            <li><a href="#"><i class="glyphicon glyphicon-user"></i>课程信息显示</a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>查询课程</a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i>导打印学生成绩</a></li>
+            <li><a href="/listCourseInfo"><i class="glyphicon glyphicon-user"></i>课程信息显示</a></li>
+            <li><a href="/CourseSearch.jsp"><i class="glyphicon glyphicon-th-list"></i>查询课程</a></li>
+           
             </ul>
           </li >
-         <li id="ul_menu">
-             <a href="./charts.html"><i class="glyphicon glyphicon-calendar"></i>修改密码</a></li>
+         
         <li>
               <a href="#"><i class="glyphicon glyphicon-fire"></i>关于系统</a>
         </li>
      </ul>
 </div>
      <div class="col-md-10">
-主窗口
+
      </div>
 </div>
 </div> 

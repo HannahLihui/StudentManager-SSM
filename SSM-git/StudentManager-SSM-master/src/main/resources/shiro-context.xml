@@ -10,7 +10,7 @@
 <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
 		<property name="securityManager" ref="securityManager" /> <!--加载管理器-->
 		<property name="loginUrl" value="/login" />    <!--没有登录的时候，跳转到这个页面-->
-		<property name="unauthorizedUrl" value="/nopermission" /> <!--当没有权限的时候，跳转到这个url-->
+		<property name="unauthorizedUrl" value="/nopermission.jsp" /> <!--当没有权限的时候，跳转到这个url-->
 		 
 		<property name="filterChainDefinitions">
 			<value>
@@ -18,13 +18,11 @@
 			 /login=anon
 			 /checkCode=anon
 				/login-vue.html = anon <!--可以不需要登录-->
-				/login-vue.jsp = anon
 				 <!-- perms 表示需要该权限才能访问的页面 -->
-				/printStudentInfo = roles[teacher]
-				/exportExcel=roles[teacher]
 			
-			
+				/addStudentInfo=roles[admin]
 				/* = authc <!-- authc 表示需要认证才能访问的页面 -->
+				
 			</value>
 		</property>
 	</bean>

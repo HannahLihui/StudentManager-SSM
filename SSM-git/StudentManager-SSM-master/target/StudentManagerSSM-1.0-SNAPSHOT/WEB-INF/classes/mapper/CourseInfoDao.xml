@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <!-- 将namespace的值设置为DAO类对应的路径 -->
+<mapper namespace="cn.wmyskxz.dao.CourseInfoDao">
+    <resultMap id="course_info" type="courseInfo">
+        <id column="id" property="id"/>
+        <result column="cno" property="cno"/>
+
+        <result column="cname" property="cname"/>
+        <result column="cedit" property="cedit"/>
+        <result column="dept" property="dept"/>
+    </resultMap>
+      
+  <!-- 查询数据条目 -->
+    <select id="getTotal" resultType="int">
+        SELECT COUNT(*) FROM course_info
+    </select>
+
+    <!-- 增加一条数据 -->
+    <insert id="addCourse" parameterType="CourseInfo">
+        INSERT INTO course_info (id,cno,cname,cedit,dept)
+        VALUES(NULL, #{cno}, #{cname}, #{cedit}, #{dept})
+    </insert>
+
+    <!-- 删除一条数据 -->
+    <delete id="deleteCourse" parameterType="int">
+        DELETE FROM course_info WHERE id = #{id}
+    </delete>
+
+    <!-- 更新一条数据 -->
+    <update id="updateCourse" parameterType="CourseInfo">
+        UPDATE course_info SET cno = #{cno}, cname = #{cname},
+        cedit = #{cedit}, dept = #{dept} WHERE id = #{id}
+    </update>
+
+    <!-- 查询一条数据 -->
+    <select id="getCourse" resultMap="course_info" parameterType="int">
+        SELECT * FROM course_info WHERE id = #{id}
+    </select>
+    <!--按照课程号查询-->
+     <select id="getCourseByNo" resultMap="course_info" parameterType="String">
+        SELECT * FROM course_info WHERE cno = #{cno}
+    </select>
+     <!--按照课程名查询-->
+     <select id="getCourseByName" resultMap="course_info" parameterType="String">
+        SELECT * FROM course_info WHERE cname = #{cname}
+    </select>
+     <!--按照开设学院查询-->
+     <select id="getCourseByDept" resultMap="course_info" parameterType="String">
+       select * from course_info where dept=#{dept}
+    </select>
+    <!-- 查询从start位置开始的count条数据-->
+    <select id="list" resultMap="course_info">
+        SELECT * FROM course_info ORDER BY cno desc limit #{param1}, #{param2}
+    </select>
+      <select id="listCourse" resultMap="course_info">
+        SELECT * FROM course_info ORDER BY cno desc 
+    </select>
+    <select id="findAll" resultMap="course_info">
+ select cno , cname ,cedit , dept  from course_info 
+ </select>
+    
+</mapper>

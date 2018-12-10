@@ -170,5 +170,10 @@ public class StudentInfoServiceImpl implements StudentInfoService {
 		
 	}
 
+	public void updateClassNumSub(StudentInfo student) {
+		// TODO Auto-generated method stub
+		studentDao.updateClassNumSub(student);
+	}
+
 	
 }

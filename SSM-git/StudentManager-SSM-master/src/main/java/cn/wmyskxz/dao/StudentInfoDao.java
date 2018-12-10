@@ -11,6 +11,7 @@ public interface StudentInfoDao {
 	    void deleteStudent(int id);
 	    void updateStudent(StudentInfo student);
 	    void updateClassNum(StudentInfo student);
+	    void updateClassNumSub(StudentInfo student);
 	    StudentInfo getStudent(int id);
 	    List<StudentInfo> list(int start, int count);
 	    List<StudentInfo> getStudentByNo(String sno);

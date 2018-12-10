@@ -78,7 +78,7 @@ public class MyRealm extends AuthorizingRealm{
 		}
 		
 			 public static void main(String[] args) {
-				 String pass="123456";
+				 String pass="123";
 				 String saltSource = "abcdef";    
 				 String hashAlgorithmName = "MD5";
 				 Object salt = new Md5Hash(saltSource);

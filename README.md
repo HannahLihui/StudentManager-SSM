@@ -11,3 +11,12 @@ fork的版本已经搭建好SSM框架，并且使用bookstrap做前端框架，�
 https://www.jianshu.com/p/a5b515be6f8b
 https://www.jianshu.com/p/438d1785275b
 https://www.jianshu.com/p/ba07a9b2dc47
+----------------------------------------------------------------------------
+更新：登陆界面用vue框架，验证码实现
+bug解决：课程模块查询bug解决：原因，option和contoller的字符串不对应
+有待解决：
+统计页面实现逻辑有问题
+班级号用option选择
+添加学生的时候可以弹出一个框，而不是跳转页面
+考虑异步查询
+

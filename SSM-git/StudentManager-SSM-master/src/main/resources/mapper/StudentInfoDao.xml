@@ -48,6 +48,9 @@
  	<update id="updateClassNum" parameterType="StudentInfo">
         UPDATE class_info SET stu_num=stu_num+1 WHERE class_no=#{class_no}
     </update>
+    <update id="updateClassNumSub" parameterType="StudentInfo">
+        UPDATE class_info SET stu_num=stu_num-1 WHERE class_no=#{class_no}
+    </update>
     <!-- 查询一条数据 -->
     <select id="getStudent" resultMap="student_info" parameterType="int">
         SELECT * FROM student_info WHERE id = #{id}

@@ -44,7 +44,7 @@ background-position: center center;
               border-radius: 10px  color: #41515B;"  >
                   <option selected="selected">按照学号查询</option>
                   <option>按照名字查询</option>
-                  <option>按照入学日期查询</option>
+                  <option>按照班级号查询</option>
                </select>    
                </br>
                </br>      
